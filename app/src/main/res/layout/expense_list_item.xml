@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="100dp"
+    android:layout_width="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/image_view"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/expense_category_icon" />
+
+        <TextView
+            android:id="@+id/timestampText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/image_view"
+            android:layout_toEndOf="@+id/image_view"
+            android:text="@string/_01_01_2017_10_00_am"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/nameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/image_view"
+            android:layout_alignStart="@+id/timestampText"
+            android:layout_gravity="center_vertical"
+            android:text="@string/food"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/amtText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/nameText"
+            android:layout_alignBottom="@+id/nameText"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="24dp"
+            android:text="@string/_150"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comexpensetracker.medium.extra_expensetracker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/extra_launcher_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/extra_launcher_icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".AdicionarDespesa"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".IntroSlider" />
+        <activity android:name=".RegistroForm" />
+        <activity android:name=".LoginForm" />
+        <activity android:name=".ViewExpense" />
+        <activity android:name=".ViewAnalytics" />
+
+    </application>
+
+</manifest>

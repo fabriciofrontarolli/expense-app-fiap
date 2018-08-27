@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comexpensetracker.medium.extra_expensetracker.AdicionarDespesa">
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/message"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/expenseNameIcon"
+        tools:ignore="RtlHardcoded" />
+
+    <EditText
+        android:id="@+id/expenseNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/expenseNameIcon"
+        android:layout_marginStart="90dp"
+        android:width="250dp"
+        android:ems="10"
+        android:hint="@string/what_was_this_expense_for"
+        android:inputType = "textCapSentences"/>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/amt_icon"
+        android:layout_marginTop="90dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/expenseAmtIcon" />
+
+    <EditText
+        android:id="@+id/expenseAmtText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/expenseAmtIcon"
+        android:layout_marginStart="90dp"
+        android:width="250dp"
+        android:ems="10"
+        android:hint="@string/enter_expense_amount"
+        android:inputType="number" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/calendar_icon"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/expenseTimestampIcon" />
+
+    <EditText
+        android:id="@+id/expenseTimestampText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/expenseTimestampIcon"
+        android:layout_marginStart="90dp"
+        android:width="250dp"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/select_expense_date_and_time"
+        android:inputType="none" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/category_selection_icon"
+        android:layout_marginTop="210dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/expenseCategorySelectionIcon" />
+
+    <TextView
+        android:id="@+id/expenseCategorySelectionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/expenseCategorySelectionIcon"
+        android:layout_marginTop="7dp"
+        android:layout_marginStart="90dp"
+        android:textSize="18sp"
+        android:width="250dp"
+        android:hint="@string/category" />
+    
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="260dp"
+        android:fadeScrollbars="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:orientation="vertical"
+                android:id="@+id/BillsLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/BillsIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_bills_icon"
+                        android:src="@drawable/bill_icon" />
+                    <ImageView
+                        android:id="@+id/TickIconBills"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/bills"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:orientation="vertical"
+                android:id="@+id/GroceriesLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/GroceriesIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_groceries_icon"
+                        android:src="@drawable/bill_icon"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/TickIconGroceries"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/groceries"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="250dp"
+                android:orientation="vertical"
+                android:id="@+id/EntertainmentLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/EntertainmentIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_entertainment_icon"
+                        android:src="@drawable/entertainment_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/TickIconEntertainment"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/entertainment"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical"
+                android:id="@+id/FuelLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/FuelIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_fuel_icon"
+                        android:src="@drawable/fuel_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/TickIconFuel"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/fuel"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical"
+                android:id="@+id/FoodLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/FoodIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_food_icon"
+                        android:src="@drawable/food_drink_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/TickIconFood"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/foodndrinks"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical"
+                android:id="@+id/HealthLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/HealthIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_health_icon"
+                        android:src="@drawable/health_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/TickIconHealth"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/health"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:layout_marginTop="140dp"
+                android:orientation="vertical"
+                android:id="@+id/TravelLayout">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/TravelIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_travel_icon"
+                        android:src="@drawable/travel_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/TickIconTravel"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/travel"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="140dp"
+                android:orientation="vertical"
+                android:id="@+id/ShoppingLayout">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/ShoppingIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_shopping_icon"
+                        android:src="@drawable/shopping_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/TickIconShopping"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/shopping"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="140dp"
+                android:orientation="vertical"
+                android:id="@+id/OtherLayout">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/OtherIcon"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_around_other_icon"
+                        android:src="@drawable/other_icon"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true" />
+                    <ImageView
+                        android:id="@+id/TickIconOther"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/tick_icon"
+                        android:layout_marginEnd="10dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/other"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/notes_icon"
+        android:layout_marginTop="400dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/expenseNotesIcon" />
+
+    <EditText
+        android:id="@+id/expenseNotesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/expenseNotesIcon"
+        android:layout_marginStart="90dp"
+        android:width="250dp"
+        android:ems="10"
+        android:hint="@string/add_a_note"
+        android:inputType="text" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:src="@drawable/tags_icon"
+        android:layout_marginTop="450dp"
+        android:layout_marginStart="30dp"
+        android:id="@+id/expenseTagsIcon" />
+
+    <EditText
+        android:id="@+id/expenseTagsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/expenseTagsIcon"
+        android:layout_marginStart="90dp"
+        android:width="250dp"
+        android:ems="10"
+        android:hint="@string/add_tags"
+        android:inputType="text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/save_btn_text"
+       android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="insertExpense"/>
+
+</RelativeLayout>

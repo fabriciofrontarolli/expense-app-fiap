@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Expense App</string>
+
+    <string name="hello_blank_fragment">Olá fragmento em branco</string>
+    <string name="title_activity_start_screen">Tela de inicialização</string>
+    <string name="action_settings">Configurações</string>
+    <string name="section_format">Olá da Seção: %1$d</string>
+
+    <string name="title_activity_welcome">Tela inicial</string>
+
+    <!-- Intro Slider Text -->
+    <string name="next">Próximo</string>
+    <string name="skip">Pular</string>
+    <string name="start">Entendi</string>
+
+    <string name="slide_title">Expense App</string>
+
+    <string name="slide_1_desc">Bem vindo usuráio!</string>
+    <string name="slide_1_desc1">Controle seu orçamento</string>
+    <string name="slide_1_image">Controle seu orçamento</string>
+
+    <string name="slide_2_desc">Rastrear Gasto</string>
+    <string name="slide_2_image">Rastrear Gasto</string>
+
+    <string name="slide_3_desc">Vejá gráficos</string>
+    <string name="slide_3_desc1">Pronto!</string>
+    <string name="slide_3_image">Ver Status</string>
+
+    <!-- Add Expense Text -->
+    <string name="enter_expense_amount">Informar a quantia</string>
+    <string name="what_was_this_expense_for">Qual a finalidade do gasto?</string>
+    <string name="select_expense_date_and_time">Data e Hora</string>
+    <string name="category">Selecione uma categoria</string>
+    <string name="bills">Contas</string>
+    <string name="groceries">Mercado</string>
+    <string name="entertainment">Entretenimento</string>
+    <string name="fuel">combustível</string>
+    <string name="foodndrinks"><![CDATA[Comida e Bebida]]></string>
+    <string name="health">Saúde</string>
+    <string name="travel">Viagem</string>
+    <string name="shopping">Shopping</string>
+    <string name="other">Outros</string>
+    <string name="add_a_note">Adicione uma nota (opcional)</string>
+    <string name="add_tags">Adicione tags (opcional)</string>
+    <string name="save_btn_text">Salvar</string>
+
+    <!-- Register Form Error Text -->
+    <string name="register_title">Bem vindo - Expense App</string>
+    <string name="register_header">Registro</string>
+    <string name="register_sub_header">Informe Detalhes</string>
+    <string name="hint_name">Usuário</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_mobile_no">Celular</string>
+    <string name="hint_password">Senha</string>
+    <string name="hint_confirm_password">Confirmar Senha</string>
+    <string name="btn_sign_up">Registrar</string>
+    <string name="err_msg_name">Informe seu nome completo</string>
+    <string name="err_msg_email">Informe um email valido</string>
+    <string name="err_msg_mobile_no">Informe um celular válido</string>
+    <string name="err_msg_password">Informe a senha</string>
+    <string name="err_msg_confirm_password">Senhas não conferem</string>
+
+    <string name="button_label_on">\u2713 on</string>
+    <string name="button_label_off">off</string>
+    <string name="login">Login</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+    <string name="already_have_an_account">Já tem uma conta?</string>
+    <string name="add_a_new_expense">Adicionar novo gasto</string>
+    <string name="view_analytics">Ver Analytics</string>
+    <string name="food">Comida</string>
+    <string name="_01_01_2017_10_00_am">01/01/2017 10:00 AM</string>
+    <string name="expense_category_icon">Icone de Categoria de Gasto</string>
+    <string name="_150">₹150</string>
+    <string name="logout">Logout</string>
+    <string name="create_acc">Criar nova conta</string>
+
+    <string-array name="dropdown_list">
+        <item>Gráfico</item>
+        <item>Gráfico Pizza</item>
+    </string-array>
+
+</resources>
